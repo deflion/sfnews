@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -12,20 +16,31 @@ a{
 
 /* Header */
 header{
-    background: url('https://images.unsplash.com/photo-1529243856184-fd5465488984?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1069&q=80') center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    
     height: 400px;
     background-color: rgb(56, 56, 56);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
+
+    header::before{
+        content: "";
+        background: url('https://images.unsplash.com/photo-1529243856184-fd5465488984?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1069&q=80') center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.2;
+        height: 400px;
+        width: 100%;
+        position: absolute;
+    }
 
     h1{
         color: whitesmoke;
         font-size: 4rem;
-        font-family: 'Times New Roman', Times, serif;
+        /* font-family: 'Times New Roman', Times, serif; */
+        text-shadow: grey 2px 2px 1px;
     }
 
 /* End Header */
@@ -45,6 +60,10 @@ header{
         padding: 6px 15px 15px;
         border-bottom: 1px solid rgb(128, 128, 128);
     }
+
+        article:nth-child(2n){
+            background-color: rgb(241, 241, 241);
+        }
     
     
     article a{
@@ -55,6 +74,25 @@ header{
         article a:hover{
             color: #0085a1;
         }
+
+    
+    /* .new .article-title{
+        display: inline-grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 1fr;
+    } */
+
+    
+    .new .article-title::before{
+        content: 'Новое';
+        position: relative;
+        float: left;
+        background-color: red;
+        color: whitesmoke;
+        padding: 5px 10px;
+        bottom: -22px;
+        margin-right: 10px;       
+    }
 
     article h2{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
